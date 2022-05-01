@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".TableReport"
+  android:background="#FFFFFF">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Monthly Report"
+      android:textSize="30dp"
+      android:layout_gravity="center"
+      android:background="#FFEB3B"/>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:weightSum="2">
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Total : "
+        android:id="@+id/total"
+        android:layout_weight="1"/>
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/monthName"
+        android:textSize="20dp"
+        android:text="Month"
+        android:layout_weight="1"/>
+    </LinearLayout>
+
+    <HorizontalScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/table"
+        android:stretchColumns="*"
+
+        >
+
+        <TableRow
+          android:background="#FF5722">
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Roll No"
+            android:id="@+id/roll"
+            android:gravity="center"
+            android:layout_margin="5dp"/>
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Name"
+            android:id="@+id/name"
+            android:gravity="center"
+            android:layout_margin="5dp"/>
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Present"
+            android:id="@+id/present"
+            android:gravity="center"
+            android:layout_margin="5dp"/>
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Absent"
+            android:id="@+id/absent"
+            android:gravity="center"
+            android:layout_margin="5dp"/>
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Percentage"
+            android:id="@+id/percent"
+            android:gravity="center"
+            android:layout_margin="5dp"/>
+        </TableRow>
+      </TableLayout>
+    </HorizontalScrollView>
+
+  </LinearLayout>
+</ScrollView>
